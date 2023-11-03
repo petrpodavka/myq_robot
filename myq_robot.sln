@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Myq.CodingTest.Robot", "Myq.CodingTest.Robot\Myq.CodingTest.Robot.csproj", "{A58B96BE-D46D-4C47-A878-89D4E6C42241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Myq.CodingTest", "Myq.CodingTest\Myq.CodingTest.csproj", "{7442BECF-A6B8-4BF7-9B73-CF6E8AB65258}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A58B96BE-D46D-4C47-A878-89D4E6C42241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A58B96BE-D46D-4C47-A878-89D4E6C42241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A58B96BE-D46D-4C47-A878-89D4E6C42241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A58B96BE-D46D-4C47-A878-89D4E6C42241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7442BECF-A6B8-4BF7-9B73-CF6E8AB65258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7442BECF-A6B8-4BF7-9B73-CF6E8AB65258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7442BECF-A6B8-4BF7-9B73-CF6E8AB65258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7442BECF-A6B8-4BF7-9B73-CF6E8AB65258}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
