@@ -1,10 +1,11 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.Extensions.Logging;
+using Myq.CodingTest.Exceptions;
 
-namespace Myq.CodingTest.Robot.Inputs;
+namespace Myq.CodingTest.Inputs;
 
-public class InputReader : IInputReader
+internal class InputReader : IInputReader
 {
     private readonly ILogger<InputReader> _logger;
 

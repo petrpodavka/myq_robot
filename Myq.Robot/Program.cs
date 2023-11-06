@@ -5,11 +5,13 @@ using System.CommandLine.Invocation;
 using System.CommandLine.Parsing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Myq.CodingTest.Robot;
+using Myq.CodingTest;
 
-var fileArgument = new Argument<FileInfo>("source-json", "File to server as an input to the program.");
+var inputArg = new Argument<FileInfo>("source-json", "File to serve as an input to the program.");
+var outputArg = new Argument<FileInfo>("target-json", "File into which output will be written.");
 var rootCommand = new RootCommand("MyQ Unattended Coding Test 2.5");
-rootCommand.AddArgument(fileArgument);
+rootCommand.AddArgument(inputArg);
+rootCommand.AddArgument(outputArg);
 
 var parser = new CommandLineBuilder(rootCommand)
     .UseHelp()
@@ -24,11 +26,12 @@ return await parser.InvokeAsync(args);
 
 public class RootCommandHandler : ICommandHandler
 {
-    private readonly RobotService _robotService;
+    private readonly IRobotService _robotService;
 
     public FileInfo SourceJson { get; set; } = null!;
+    public FileInfo TargetJson { get; set; } = null!;
 
-    public RootCommandHandler(RobotService robotService)
+    public RootCommandHandler(IRobotService robotService)
     {
         _robotService = robotService;
     }
@@ -37,15 +40,9 @@ public class RootCommandHandler : ICommandHandler
 
     public async Task<int> InvokeAsync(InvocationContext context)
     {
-        try
-        {
-            await _robotService.ExecuteAsync(SourceJson, context.GetCancellationToken());
-            return 0;
-        }
-        catch (RobotException)
-        {
-            // This type of exception has been handled already
-            return -1;
-        }
+        await _robotService.ExecuteAsync(SourceJson, TargetJson, context.GetCancellationToken());
+
+        // Unhandled exception means critical failure that leads to output not being written, anything else is success.
+        return 0;
     }
 }

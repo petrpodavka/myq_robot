@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace Myq.CodingTest.Robot.Inputs;
+namespace Myq.CodingTest.Inputs;
 
-public class InputService : IInputService
+internal class InputService : IInputService
 {
     private readonly ILogger<InputService> _logger;
     private readonly IInputReader _inputReader;

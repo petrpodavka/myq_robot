@@ -1,6 +1,6 @@
-﻿namespace Myq.CodingTest.Robot.Inputs;
+﻿namespace Myq.CodingTest.Inputs;
 
-public interface IInputService
+internal interface IInputService
 {
     Task<Input> RetrieveInputAsync(string path, CancellationToken cancellationToken);
 }

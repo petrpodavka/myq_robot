@@ -1,9 +1,9 @@
-﻿namespace Myq.CodingTest.Robot.Inputs;
+﻿namespace Myq.CodingTest.Inputs;
 
 /// <summary>
 /// Provides capabilities to validate program input.
 /// </summary>
-public interface IInputValidator
+internal interface IInputValidator
 {
     /// <summary>
     /// Validates program input.

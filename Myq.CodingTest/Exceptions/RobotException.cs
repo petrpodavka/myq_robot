@@ -1,4 +1,4 @@
-﻿namespace Myq.CodingTest.Robot;
+﻿namespace Myq.CodingTest.Exceptions;
 
 /// <summary>
 /// Custom exception not treated as unhandled in program entrypoint.

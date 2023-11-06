@@ -1,9 +1,9 @@
-﻿namespace Myq.CodingTest.Robot.Inputs;
+﻿namespace Myq.CodingTest.Inputs;
 
 /// <summary>
 /// Provides capabilities to read program input.
 /// </summary>
-public interface IInputReader
+internal interface IInputReader
 {
     /// <summary>
     /// Reads the input from a file.

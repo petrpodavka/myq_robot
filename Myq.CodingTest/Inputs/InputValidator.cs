@@ -1,8 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
+using Myq.CodingTest.Exceptions;
 
-namespace Myq.CodingTest.Robot.Inputs;
+namespace Myq.CodingTest.Inputs;
 
-public class InputValidator : IInputValidator
+internal class InputValidator : IInputValidator
 {
     private readonly ILogger<InputValidator> _logger;
 
